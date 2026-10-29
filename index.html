@@ -458,6 +458,35 @@ footer img{height:40px;width:auto;margin:0 auto 12px}
 .flow li{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:baseline;font-size:17px;line-height:1.9;color:rgba(255,255,255,.95)}
 .flow b{font-family:var(--serif-en);font-size:22px;font-weight:400;color:#fff}
 @media(min-width:768px){.support .card:last-child{grid-column:1 / -1}}
+
+/* round 10 (2026-10-29): 明るく・読みやすく。文字は #401116、英字と見出しラベルは明るいローズ、背景は薄いベージュピンク */
+:root{--text:#401116;--strong:#401116;--muted:#5C3A40;--script-c:#B0707D;--script-ink:#BE7F8C;--beige:#F9EFEB;--blue:#FBF4F1;--soft:#FCF8F6;--hero-bg:#FCF8F6;--hero-h:#401116;--hero-text:#401116;--line:#eadcd6;--closing-veil:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.12))}
+.bg-dark{background:#FBF5F2}
+.hero2 h1,.hero2 .punch,.hero2 .name .jp,.hero2 .ans b,.profile2 .name,.profile2 .big,.profile2 .core{color:#401116}
+.hero2 .ans,.hero2 .name p,.profile2 .p{color:#401116}
+.hero2 .script,.profile2 .role{color:var(--script-ink)}
+.profile2 .role{color:var(--script-c)}
+.murmur p{opacity:1}
+.hero2::after{background:linear-gradient(180deg,rgba(252,248,246,0),#FCF8F6)}
+/* 生徒さんの声：一番大事なところなので、濃く・大きく */
+.voice{border-color:#e3d0c9}
+.voice .who{color:#401116}
+.voice .who span{font-size:15px;color:#5C3A40}
+.voice .before{font-size:17px;color:#4A2A30}
+.voice blockquote{font-size:19px;color:#401116;border-top-color:#e3d0c9}
+.voice .src,.video-cap,.video-sum,.disclaimer{color:#5C3A40}
+.video-cap{font-size:15px}.video-sum{font-size:15.5px}.disclaimer{font-size:15px}
+.quote figcaption,.pre-voices p span{color:#5C3A40}
+.pre-voices p span{font-size:15px}
+/* 最後のメッセージ：明るい面に載せて読みやすく */
+.closing{padding:88px 22px;color:#401116}
+.closing .in{background:rgba(255,251,249,.9);max-width:700px;padding:64px 30px;box-shadow:0 18px 50px rgba(64,17,22,.12)}
+.closing .script{color:var(--script-ink)}
+.closing h2,.closing .core,.closing .p strong{color:#401116}
+.closing .p{color:#401116}
+.closing .btn{background:var(--accent);color:#fff}
+.label{color:#A5606D}
+@media(min-width:1024px){.closing{padding:120px 40px}}
 </style>
 </head>
 <body>
