@@ -883,13 +883,17 @@ footer img{height:40px;width:auto;margin:0 auto 12px}
 
 </main>
 <footer><img src="images/logo.png" alt="First Class BY SEIKO MEGURO">© 2026 First Class BY SEIKO MEGURO</footer>
+<!-- アクセス計測（GoatCounter・匿名・Cookieなし・2026-10-30）。運命リズムと同じ unmei.goatcounter.com に、パス /fcld-lp で数える（独自ドメインに移っても運命リズムの / と混ざらないよう固定） -->
+<script data-goatcounter="https://unmei.goatcounter.com/count" data-goatcounter-settings='{"path":"/fcld-lp"}' async src="//gc.zgo.at/count.js"></script>
 <script>
-/* 申込ボタンの計測：どのボタンから申込先へ飛んだかを ?utm_source=fcld_lp&utm_content=押した場所（header/hero/future/voices/course/closing）で付ける */
+/* 申込ボタンの計測：どのボタンから申込先へ飛んだかを ?utm_source=fcld_lp&utm_content=押した場所（header/hero/future/voices/course/closing）で付ける
+   あわせて GoatCounter に fcld_cta/押した場所 のイベントを送る（closing＝資料請求フォームへ飛ぶボタン） */
 (function(){
   document.querySelectorAll("[data-cta]").forEach(function(a){
     a.addEventListener("click",function(){
       var h=a.getAttribute("href");
       if(/^https?:/.test(h)){var u=new URL(h);u.searchParams.set("utm_source","fcld_lp");u.searchParams.set("utm_content",a.dataset.cta);a.href=u.toString()}
+      try{window.goatcounter.count({path:"fcld_cta/"+a.dataset.cta,event:true})}catch(e){}
     });
   });
 })();
